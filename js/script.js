@@ -19,7 +19,7 @@ if (navigator.serviceWorker) {
  * This function compares slider with random number.
  */
 function determineClicked() {
-  const chosenNumber = parseInt(document.getElementById("chosen").value)
+  const chosenNumber = parseInt(document.getElementById("chosen").value);
 
   // true
   if (chosenNumber > -1) {
