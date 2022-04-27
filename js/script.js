@@ -10,36 +10,25 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Unit-5-01-HTML/sw.js", {
-    scope: "/ICS2O-Unit-5-01-HTML/",
+  navigator.serviceWorker.register("/ICS2O-Unit-5-02-HTML/sw.js", {
+    scope: "/ICS2O-Unit-5-02-HTML/",
   });
-}
-
-const randomNumber = Math.floor(Math.random() * 6) + 1;
-
-/**
- * This function updates the slider value.
- */
-function updateSliderValue(valueFromSlider) {
-  document.getElementById("slider-value").innerHTML = valueFromSlider;
 }
 
 /**
  * This function compares slider with random number.
  */
-function guessClicked() {
-  const sliderValue = slider.value;
+function determineClicked() {
+  const chosenNumber = parseInt(document.getElementById("chosen").value)
 
-  // process
-  if (sliderValue == randomNumber) {
-    document.getElementById("guess-result").innerHTML =
-      "Answer is " + randomNumber + "!" + " Congratulations!";
-    // console.log("Congratulations!")
+  // true
+  if (chosenNumber > -1) {
+    document.getElementById("result").innerHTML =
+      "You chose " + chosenNumber + ", which is a positive number!";
   }
-  //  block of code to be executed if condition1 is true
-  if (sliderValue != randomNumber) {
-    document.getElementById("guess-result").innerHTML =
-      "Answer is " + randomNumber + "!" + " Try again!";
-    // console.log("Try again!")
+  //  false
+  if (sliderValue < -1) {
+    document.getElementById("result").innerHTML =
+      "You chose " + chosenNumber + ", which is a negative number!";
   }
 }
