@@ -24,11 +24,11 @@ function determineClicked() {
   // true
   if (chosenNumber > -1) {
     document.getElementById("result").innerHTML =
-      "You chose " + chosenNumber + ", which is a positive number!";
+      "You chose " + chosenNumber + ", which is a positive number.";
   }
   //  false
   if (chosenNumber < -1) {
     document.getElementById("result").innerHTML =
-      "You chose " + chosenNumber + ", which is a negative number!";
+      "You chose " + chosenNumber + ", which is a negative number.";
   }
 }
