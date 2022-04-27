@@ -27,7 +27,7 @@ function determineClicked() {
       "You chose " + chosenNumber + ", which is a positive number!";
   }
   //  false
-  if (sliderValue < -1) {
+  if (chosenNumber < -1) {
     document.getElementById("result").innerHTML =
       "You chose " + chosenNumber + ", which is a negative number!";
   }
