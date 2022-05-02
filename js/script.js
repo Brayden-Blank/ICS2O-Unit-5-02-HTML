@@ -25,8 +25,7 @@ function determineClicked() {
   if (chosenNumber > -1) {
     document.getElementById("result").innerHTML =
       "You chose " + chosenNumber + ", which is a positive number.";
-  }
-  else {
+  } else {
     document.getElementById("result").innerHTML =
       "You chose " + chosenNumber + ", which is a negative number.";
   }
