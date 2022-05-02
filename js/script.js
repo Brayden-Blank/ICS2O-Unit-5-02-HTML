@@ -7,7 +7,7 @@
 "use strict";
 
 /**
- * Check servie worker.
+ * Check service worker.
  */
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/ICS2O-Unit-5-02-HTML/sw.js", {
@@ -26,8 +26,7 @@ function determineClicked() {
     document.getElementById("result").innerHTML =
       "You chose " + chosenNumber + ", which is a positive number.";
   }
-  //  false
-  if (chosenNumber < -1) {
+  else {
     document.getElementById("result").innerHTML =
       "You chose " + chosenNumber + ", which is a negative number.";
   }
